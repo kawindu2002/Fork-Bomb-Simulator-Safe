@@ -1,0 +1,36 @@
+body {
+    background-color: #111;
+    color: #0f0;
+    font-family: monospace;
+    overflow: hidden;
+}
+.bomb {
+    position: absolute;
+    white-space: nowrap;
+    animation: explode 10s linear infinite;
+}
+@keyframes explode {
+    0% { transform: scale(1) rotate(0); }
+    100% { transform: scale(3) rotate(360deg); opacity: 0; }
+}
+
+button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 20px;
+    background: White;
+    color: red;
+    border: 2px solid red;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 100;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+button:hover {
+    background: red;
+    color: white;
+}
